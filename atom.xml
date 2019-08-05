@@ -1,283 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Material X</title>
+  <title>肥宅小窝</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://fantasyarcher.github.io/"/>
-  <updated>2019-07-29T10:12:46.373Z</updated>
+  <updated>2019-08-05T08:02:28.026Z</updated>
   <id>https://fantasyarcher.github.io/</id>
   
   <author>
-    <name>Mr.X</name>
+    <name>Mr.L</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>自定义meta信息</title>
-    <link href="https://fantasyarcher.github.io/example/%E8%87%AA%E5%AE%9A%E4%B9%89meta%E4%BF%A1%E6%81%AF/"/>
-    <id>https://fantasyarcher.github.io/example/自定义meta信息/</id>
-    <published>2019-04-05T16:00:00.000Z</published>
-    <updated>2019-07-29T10:12:46.373Z</updated>
-    
-    <content type="html"><![CDATA[<p>现在你可以在文章开头和末尾放置任意支持的meta标签，支持的标签有：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">title</span><br><span class="line">author</span><br><span class="line">date</span><br><span class="line">updated</span><br><span class="line">categories</span><br><span class="line">tags</span><br><span class="line">counter</span><br><span class="line">top</span><br></pre></td></tr></table></figure></p><p>例如本文：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">blog</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">自定义meta信息</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2019</span><span class="bullet">-04</span><span class="bullet">-06</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">教程</span></span><br><span class="line"><span class="attr">tags:</span> <span class="string">ss</span></span><br><span class="line"><span class="attr">meta:</span></span><br><span class="line"><span class="attr">  header:</span> <span class="string">[title,</span> <span class="string">author,</span> <span class="string">updated,</span> <span class="string">counter]</span></span><br><span class="line"><span class="attr">  footer:</span> <span class="string">[categories,</span> <span class="string">tags,</span> <span class="string">share]</span></span><br><span class="line"><span class="attr">valine:</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">/top/</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure><p>如果不写，就按照主题配置文件中的显示。<br>如果不想显示任何meta标签，就写<code>false</code>，例如关于页面：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">关于</span></span><br><span class="line"><span class="attr">meta:</span></span><br><span class="line"><span class="attr">  header:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  footer:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">valine:</span></span><br><span class="line"><span class="attr">  placeholder:</span> <span class="string">有什么想对我说的呢？</span></span><br><span class="line"><span class="attr">sidebar:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>]]></content>
+    <title>测试</title>
+    <link href="https://fantasyarcher.github.io/example/%E6%B5%8B%E8%AF%95/"/>
+    <id>https://fantasyarcher.github.io/example/测试/</id>
+    <published>2019-08-05T08:02:27.000Z</published>
+    <updated>2019-08-05T08:02:28.026Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;现在你可以在文章开头和末尾放置任意支持的meta标签，支持的标签有：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;
-      
-    
     </summary>
     
-      <category term="教程" scheme="https://fantasyarcher.github.io/blog/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="ss" scheme="https://fantasyarcher.github.io/blog/tags/ss/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>引用外部文章</title>
-    <link href="https://fantasyarcher.github.io/example/%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%E6%96%87%E7%AB%A0/"/>
-    <id>https://fantasyarcher.github.io/example/引用外部文章/</id>
-    <published>2019-04-05T16:00:00.000Z</published>
-    <updated>2019-07-29T10:12:46.355Z</updated>
-    
-    <content type="html"><![CDATA[<p>只需设置permalink即可：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">xaoxuu</span></span><br><span class="line"><span class="attr">avatar:</span> <span class="attr">https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png</span></span><br><span class="line"><span class="attr">author_url:</span> <span class="attr">https://xaoxuu.com</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="attr">https://xaoxuu.com/wiki/material-x/</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure></p><p>项目分类中的均为外部文章，<a href="/projects/">前往查看</a>。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;只需设置permalink即可：&lt;br&gt;&lt;figure class=&quot;highlight yml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;
-      
-    
-    </summary>
-    
-      <category term="教程" scheme="https://fantasyarcher.github.io/blog/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>支持多用户</title>
-    <link href="https://fantasyarcher.github.io/example/%E5%A4%9A%E7%94%A8%E6%88%B7/"/>
-    <id>https://fantasyarcher.github.io/example/多用户/</id>
-    <published>2019-04-05T16:00:00.000Z</published>
-    <updated>2019-07-29T10:12:46.344Z</updated>
-    
-    <content type="html"><![CDATA[<p>在博客根目录中配置的属性是默认作者：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">author:</span> <span class="string">Mr.X</span></span><br><span class="line"><span class="attr">avatar:</span> <span class="attr">https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png</span></span><br><span class="line"><span class="attr">url:</span> <span class="attr">http://mxclub.github.io</span></span><br></pre></td></tr></table></figure></p><p>在文章的Front-matter中可以配置本篇文章的作者：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">xaoxuu</span></span><br><span class="line"><span class="attr">avatar:</span> <span class="attr">https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png</span></span><br><span class="line"><span class="attr">author_url:</span> <span class="attr">https://xaoxuu.com</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure><p>写法示例：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">blog</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">支持多用户</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">appx.online</span></span><br><span class="line"><span class="attr">author_url:</span> <span class="attr">https://appx.online</span></span><br><span class="line"><span class="attr">avatar:</span> <span class="attr">https://img.vim-cn.com/ae/2e0ffa7c770dbebba64f2f1770c29788a09e24.png</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2019</span><span class="bullet">-04</span><span class="bullet">-06</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">教程</span></span><br><span class="line"><span class="attr">valine:</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">/top/</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;在博客根目录中配置的属性是默认作者：&lt;br&gt;&lt;figure class=&quot;highlight yml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;
-      
-    
-    </summary>
-    
-      <category term="教程" scheme="https://fantasyarcher.github.io/blog/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>置顶</title>
-    <link href="https://fantasyarcher.github.io/example/top/"/>
-    <id>https://fantasyarcher.github.io/example/top/</id>
-    <published>2018-12-29T16:00:00.000Z</published>
-    <updated>2019-07-29T10:12:46.332Z</updated>
-    
-    <content type="html"><![CDATA[<p>文章的Front-matter填写<code>top: true</code>就置顶了。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">top:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p><p>这是一个示例博客。源码目录：<a href="https://github.com/xaoxuu/blog-example" target="_blank" rel="noopener">https://github.com/xaoxuu/blog-example</a></p><a id="more"></a><p><img class="emoji tieba" src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/img/tieba/捂嘴笑.png">没有更多了哦。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;文章的Front-matter填写&lt;code&gt;top: true&lt;/code&gt;就置顶了。&lt;br&gt;&lt;figure class=&quot;highlight yml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;top:&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;这是一个示例博客。源码目录：&lt;a href=&quot;https://github.com/xaoxuu/blog-example&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/xaoxuu/blog-example&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://fantasyarcher.github.io/blog/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>共用一个评论框</title>
-    <link href="https://fantasyarcher.github.io/example/%E5%85%B1%E7%94%A8%E4%B8%80%E4%B8%AA%E8%AF%84%E8%AE%BA%E6%A1%86/"/>
-    <id>https://fantasyarcher.github.io/example/共用一个评论框/</id>
-    <published>2018-12-29T16:00:00.000Z</published>
-    <updated>2019-07-29T10:12:46.338Z</updated>
-    
-    <content type="html"><![CDATA[<p>写法示例：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">共用一个评论框</span></span><br><span class="line"><span class="attr">valine:</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">/top/</span></span><br><span class="line"><span class="attr">  placeholder:</span> <span class="string">你觉得共用一个评论框有意义吗？</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;写法示例：&lt;/p&gt;
-&lt;figure class=&quot;highlight yml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;
-      
-    
-    </summary>
-    
-      <category term="教程" scheme="https://fantasyarcher.github.io/blog/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>摘要注意事项</title>
-    <link href="https://fantasyarcher.github.io/example/%E6%91%98%E8%A6%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
-    <id>https://fantasyarcher.github.io/example/摘要注意事项/</id>
-    <published>2018-12-29T16:00:00.000Z</published>
-    <updated>2019-07-29T10:12:46.360Z</updated>
-    
-    <content type="html"><![CDATA[<p>如果使用<code>&lt;!-- more --&gt;</code>来实现摘要，则<code>&lt;!-- more --&gt;</code>前后一定要有空行，不然可能导致显示错位。</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">这是摘要</span></span><br><span class="line"></span><br><span class="line"><span class="string">&lt;!--</span> <span class="string">more</span> <span class="bullet">--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="string">这是正文</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;如果使用&lt;code&gt;&amp;lt;!-- more --&amp;gt;&lt;/code&gt;来实现摘要，则&lt;code&gt;&amp;lt;!-- more --&amp;gt;&lt;/code&gt;前后一定要有空行，不然可能导致显示错位。&lt;/p&gt;
-&lt;figure class=&quot;highlight yml&quot;&gt;&lt;table&gt;
-      
-    
-    </summary>
-    
-      <category term="教程" scheme="https://fantasyarcher.github.io/blog/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>文章专属BGM</title>
-    <link href="https://fantasyarcher.github.io/example/%E6%96%87%E7%AB%A0%E4%B8%93%E5%B1%9EBGM/"/>
-    <id>https://fantasyarcher.github.io/example/文章专属BGM/</id>
-    <published>2018-12-29T16:00:00.000Z</published>
-    <updated>2019-07-29T10:12:46.367Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">文章专属BGM</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018</span><span class="bullet">-12</span><span class="bullet">-30</span></span><br><span class="line"><span class="attr">music:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">song</span>        <span class="comment"># song （单曲） album （专辑） playlist （歌单） search （搜索）</span></span><br><span class="line"><span class="attr">  id:</span> <span class="number">26664345</span>      <span class="comment"># 歌曲/专辑/歌单 ID</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure><p>详情见文档：<a href="https://xaoxuu.com/wiki/material-x/third-party-services/" target="_blank" rel="noopener">https://xaoxuu.com/wiki/material-x/third-party-services/</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight yml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;
-      
-    
-    </summary>
-    
-      <category term="教程" scheme="https://fantasyarcher.github.io/blog/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>多语言</title>
-    <link href="https://fantasyarcher.github.io/example/%E5%A4%9A%E8%AF%AD%E8%A8%80/"/>
-    <id>https://fantasyarcher.github.io/example/多语言/</id>
-    <published>2018-12-29T16:00:00.000Z</published>
-    <updated>2019-07-29T10:12:46.350Z</updated>
-    
-    <content type="html"><![CDATA[<p>在主目录找到或者新增<code>language</code>，例如：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">en</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">zh-HK</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">zh-TW</span></span><br></pre></td></tr></table></figure><p>博客将按照给定的优先级显示语言。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;在主目录找到或者新增&lt;code&gt;language&lt;/code&gt;，例如：&lt;/p&gt;
-&lt;figure class=&quot;highlight yml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;
-      
-    
-    </summary>
-    
-      <category term="教程" scheme="https://fantasyarcher.github.io/blog/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vim-cn.sh</title>
-    <link href="https://fantasyarcher.github.io/https://xaoxuu.com/wiki/vim-cn.sh//"/>
-    <id>https://fantasyarcher.github.io/https://xaoxuu.com/wiki/vim-cn.sh//</id>
-    <published>2018-09-21T16:00:00.000Z</published>
-    <updated>2019-01-08T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://img.vim-cn.com" target="_blank" rel="noopener">img.vim-cn.com</a>是一个十分干净好用的图床，本站以及博客中的所有图片都是使用的这个图床。</p><p>所以，这是一个快速批量<strong>上传图片</strong>的脚本。</p><p><fancybox><img src="https://img.vim-cn.com/0d/e463788b9eb82f82b551d8da1cd4cbae9d64cb.png" alt=""><fancybox></fancybox></fancybox></p><a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://img.vim-cn.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;img.vim-cn.com&lt;/a&gt;是一个十分干净好用的图床，本站以及博客中的所有图片都是使用的这个图床。&lt;/p&gt;
-&lt;p&gt;所以，这是一个快速批量&lt;strong&gt;上传图片&lt;/strong&gt;的脚本。&lt;/p&gt;
-&lt;p&gt;&lt;fancybox&gt;&lt;img src=&quot;https://img.vim-cn.com/0d/e463788b9eb82f82b551d8da1cd4cbae9d64cb.png&quot; alt=&quot;&quot;&gt;&lt;fancybox&gt;&lt;/fancybox&gt;&lt;/fancybox&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Dev" scheme="https://fantasyarcher.github.io/blog/categories/Dev/"/>
-    
-      <category term="Shell Scripts" scheme="https://fantasyarcher.github.io/blog/categories/Dev/Shell-Scripts/"/>
-    
-    
-      <category term="shell" scheme="https://fantasyarcher.github.io/blog/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo.sh</title>
-    <link href="https://fantasyarcher.github.io/https://xaoxuu.com/wiki/hexo.sh//"/>
-    <id>https://fantasyarcher.github.io/https://xaoxuu.com/wiki/hexo.sh//</id>
-    <published>2018-08-08T16:00:00.000Z</published>
-    <updated>2019-04-03T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>一个方便管理与发布hexo博客的脚本。</strong></p><p><fancybox><img src="https://img.vim-cn.com/e8/e14f6ecb16deb21e894e78c9ccc46729854394.png" alt=""><fancybox></fancybox></fancybox></p><a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;一个方便管理与发布hexo博客的脚本。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;fancybox&gt;&lt;img src=&quot;https://img.vim-cn.com/e8/e14f6ecb16deb21e894e78c9ccc46729854394.png&quot; alt=&quot;&quot;&gt;&lt;fancybox&gt;&lt;/fancybox&gt;&lt;/fancybox&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Dev" scheme="https://fantasyarcher.github.io/blog/categories/Dev/"/>
-    
-      <category term="Hexo" scheme="https://fantasyarcher.github.io/blog/categories/Dev/Hexo/"/>
-    
-    
-      <category term="shell" scheme="https://fantasyarcher.github.io/blog/tags/shell/"/>
-    
-      <category term="Hexo" scheme="https://fantasyarcher.github.io/blog/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Material X</title>
-    <link href="https://fantasyarcher.github.io/https://xaoxuu.com/wiki/material-x//"/>
-    <id>https://fantasyarcher.github.io/https://xaoxuu.com/wiki/material-x//</id>
-    <published>2017-10-23T16:00:00.000Z</published>
-    <updated>2019-04-05T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>一个简约的卡片式Hexo博客主题。</strong></p><fancybox><br><img src="https://img.vim-cn.com/52/a54815c02ce232f11f54b2c547c1337828833c.png" alt=""><br></fancybox><a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;一个简约的卡片式Hexo博客主题。&lt;/strong&gt;&lt;/p&gt;
-&lt;fancybox&gt;&lt;br&gt;&lt;img src=&quot;https://img.vim-cn.com/52/a54815c02ce232f11f54b2c547c1337828833c.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/fancybox&gt;
-    
-    </summary>
-    
-      <category term="Dev" scheme="https://fantasyarcher.github.io/blog/categories/Dev/"/>
-    
-      <category term="Hexo" scheme="https://fantasyarcher.github.io/blog/categories/Dev/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="https://fantasyarcher.github.io/blog/tags/Hexo/"/>
     
   </entry>
   
@@ -472,6 +221,91 @@
         &lt;p&gt;This is a Chinese test post.&lt;/p&gt;
 &lt;p&gt;善我王上魚、產生資西員合兒臉趣論。畫衣生這著爸毛親可時，安程幾？合學作。觀經而作建。都非子作這！法如言子你關！手師也。&lt;/p&gt;
 &lt;p&gt;以也座論頭室業放。要車時地變此親不老高小是統習直麼調未，行年香一？&lt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo turpis, tincidunt ac convallis id.</title>
+    <link href="https://fantasyarcher.github.io/test/long-title/"/>
+    <id>https://fantasyarcher.github.io/test/long-title/</id>
+    <published>2013-12-24T15:31:06.000Z</published>
+    <updated>2019-07-29T10:12:46.440Z</updated>
+    
+    <content type="html"><![CDATA[<p>This post has a long title. Make sure the title displayed right.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This post has a long title. Make sure the title displayed right.&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Link Post</title>
+    <link href="https://fantasyarcher.github.io/test/link-post/"/>
+    <id>https://fantasyarcher.github.io/test/link-post/</id>
+    <published>2013-12-24T15:30:04.000Z</published>
+    <updated>2019-07-29T10:12:46.434Z</updated>
+    
+    <content type="html"><![CDATA[<p>This is a link post. Clicking on the link should open <a href="http://www.google.com/" target="_blank" rel="noopener">Google</a> in a new tab or window.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This is a link post. Clicking on the link should open &lt;a href=&quot;http://www.google.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Google&lt;/a&gt; in a new
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Elements</title>
+    <link href="https://fantasyarcher.github.io/test/elements/"/>
+    <id>https://fantasyarcher.github.io/test/elements/</id>
+    <published>2013-12-24T15:29:08.000Z</published>
+    <updated>2019-07-29T10:12:46.399Z</updated>
+    
+    <content type="html"><![CDATA[<p>The purpose of this post is to help you make sure all of HTML elements can display properly. If you use CSS reset, don’t forget to redefine the style by yourself.</p><hr><h1 id="Heading-1"><a href="#Heading-1" class="headerlink" title="Heading 1"></a>Heading 1</h1><h2 id="Heading-2"><a href="#Heading-2" class="headerlink" title="Heading 2"></a>Heading 2</h2><h3 id="Heading-3"><a href="#Heading-3" class="headerlink" title="Heading 3"></a>Heading 3</h3><h4 id="Heading-4"><a href="#Heading-4" class="headerlink" title="Heading 4"></a>Heading 4</h4><h5 id="Heading-5"><a href="#Heading-5" class="headerlink" title="Heading 5"></a>Heading 5</h5><h6 id="Heading-6"><a href="#Heading-6" class="headerlink" title="Heading 6"></a>Heading 6</h6><hr><h2 id="Paragraph"><a href="#Paragraph" class="headerlink" title="Paragraph"></a>Paragraph</h2><p>Lorem ipsum dolor sit amet, <a href="">test link</a> consectetur adipiscing elit. <strong>Strong text</strong> pellentesque ligula commodo viverra vehicula. <em>Italic text</em> at ullamcorper enim. Morbi a euismod nibh. <u>Underline text</u> non elit nisl. <del>Deleted text</del> tristique, sem id condimentum tempus, metus lectus venenatis mauris, sit amet semper lorem felis a eros. Fusce egestas nibh at sagittis auctor. Sed ultricies ac arcu quis molestie. Donec dapibus nunc in nibh egestas, vitae volutpat sem iaculis. Curabitur sem tellus, elementum nec quam id, fermentum laoreet mi. Ut mollis ullamcorper turpis, vitae facilisis velit ultricies sit amet. Etiam laoreet dui odio, id tempus justo tincidunt id. Phasellus scelerisque nunc sed nunc ultricies accumsan.</p><p>Interdum et malesuada fames ac ante ipsum primis in faucibus. <code>Sed erat diam</code>, blandit eget felis aliquam, rhoncus varius urna. Donec tellus sapien, sodales eget ante vitae, feugiat ullamcorper urna. Praesent auctor dui vitae dapibus eleifend. Proin viverra mollis neque, ut ullamcorper elit posuere eget.</p><blockquote><p>Praesent diam elit, interdum ut pulvinar placerat, imperdiet at magna.</p></blockquote><p>Maecenas ornare arcu at mi suscipit, non molestie tortor ultrices. Aenean convallis, diam et congue ultricies, erat magna tincidunt orci, pulvinar posuere mi sapien ac magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent vitae placerat mauris. Nullam laoreet ante posuere tortor blandit auctor. Sed id ligula volutpat leo consequat placerat. Mauris fermentum dolor sed augue malesuada sollicitudin. Vivamus ultrices nunc felis, quis viverra orci eleifend ut. Donec et quam id urna cursus posuere. Donec elementum scelerisque laoreet.</p><h2 id="List-Types"><a href="#List-Types" class="headerlink" title="List Types"></a>List Types</h2><h3 id="Definition-List-dl"><a href="#Definition-List-dl" class="headerlink" title="Definition List (dl)"></a>Definition List (dl)</h3><dl><dt>Definition List Title</dt><dd>This is a definition list division.</dd></dl><h3 id="Ordered-List-ol"><a href="#Ordered-List-ol" class="headerlink" title="Ordered List (ol)"></a>Ordered List (ol)</h3><ol><li>List Item 1</li><li>List Item 2</li><li>List Item 3</li></ol><h3 id="Unordered-List-ul"><a href="#Unordered-List-ul" class="headerlink" title="Unordered List (ul)"></a>Unordered List (ul)</h3><ul><li>List Item 1</li><li>List Item 2</li><li>List Item 3</li></ul><h2 id="Table"><a href="#Table" class="headerlink" title="Table"></a>Table</h2><table><thead><tr><th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th></tr></thead><tbody><tr><td>Division 1</td><td>Division 2</td><td>Division 3</td></tr><tr><td>Division 1</td><td>Division 2</td><td>Division 3</td></tr><tr><td>Division 1</td><td>Division 2</td><td>Division 3</td></tr></tbody></table><h2 id="Misc-Stuff-abbr-acronym-sub-sup-etc"><a href="#Misc-Stuff-abbr-acronym-sub-sup-etc" class="headerlink" title="Misc Stuff - abbr, acronym, sub, sup, etc."></a>Misc Stuff - abbr, acronym, sub, sup, etc.</h2><p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;The purpose of this post is to help you make sure all of HTML elements can display properly. If you use CSS reset, don’t forget to redefi
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://fantasyarcher.github.io/test/hello-world/"/>
+    <id>https://fantasyarcher.github.io/test/hello-world/</id>
+    <published>2013-12-24T09:49:32.000Z</published>
+    <updated>2019-07-29T10:12:46.417Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://zespia.tw/hexo" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="http://zespia.tw/hexo/docs" target="_blank" rel="noopener">documentation</a> to learn how to use.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;http://zespia.tw/hexo&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;http://z
       
     
     </summary>
