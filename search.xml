@@ -11,6 +11,14 @@
         <content type="html"><![CDATA[]]></content>
       
       
+      <categories>
+          
+          <category> 分类A </category>
+          
+          <category> 分类B </category>
+          
+      </categories>
+      
       
     </entry>
     

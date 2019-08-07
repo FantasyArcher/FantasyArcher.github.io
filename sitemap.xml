@@ -4,7 +4,7 @@
 
     <sitemap>
         <loc>https://fantasyarcher.github.io/post-sitemap.xml</loc>
-        <lastmod>2019-08-05T08:02:28.026Z</lastmod>
+        <lastmod>2019-08-07T01:58:10.842Z</lastmod>
     </sitemap>
 
     <sitemap>
@@ -14,12 +14,7 @@
 
     <sitemap>
         <loc>https://fantasyarcher.github.io/category-sitemap.xml</loc>
-        
-    </sitemap>
-
-    <sitemap>
-        <loc>https://fantasyarcher.github.io/tag-sitemap.xml</loc>
-        
+        <lastmod>2019-08-07T01:58:10.842Z</lastmod>
     </sitemap>
 
 </sitemapindex>
