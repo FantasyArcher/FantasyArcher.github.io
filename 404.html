@@ -410,12 +410,10 @@
       
       
       
-      
         <section id="comments">
-          <div id="valine_container" class="valine_thread">
-            <i class="fas fa-spinner fa-spin fa-fw"></i>
-          </div>
+          <div id="gitalk-container"></div>
         </section>
+      
       
     </section>
   </article>
@@ -803,39 +801,24 @@
 
 
 
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-    
-      <script src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/js/volantis.min.js"></script>
-    
-  
-  <script>
-  var GUEST_INFO = ['nick','mail','link'];
-  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
-    return GUEST_INFO.indexOf(item) > -1
-  });
-  var notify = 'true' == true;
-  var verify = 'true' == true;
-  var valine = new Valine();
-  valine.init({
-    el: '#valine_container',
-    notify: notify,
-    verify: verify,
-    guest_info: guest_info,
-    
-      path: "/404.html",
-    
-    appId: "1rN07DpQRE12WD9Au1SuWCww-gzGzoHsz",
-    appKey: "EAyPrjSfiYnuRDiIpwczBeJ4",
-    placeholder: "请留言告诉我您要访问哪个页面找不到了",
-    pageSize:'10',
-    avatar:'mp',
-    lang:'zh-cn',
-    highlight:'true'
-  })
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: "b7a76e6da48eb317b959",
+      clientSecret: "e291fa9943dff6b712bc0214be9ef0af0b7117b3",
+      repo: "FantasyArcher.github.io",
+      owner: "FantasyArcher",
+      admin: "FantasyArcher",
+      
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+      
+      distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+    gitalk.render('gitalk-container');
   </script>
+
+
 
 
 
