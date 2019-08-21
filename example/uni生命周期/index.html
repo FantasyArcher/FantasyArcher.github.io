@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Category: uni-app | 肥宅小窝</title>
+  <title>uni-app的生命周期 | 肥宅小窝</title>
   
   
 
@@ -58,7 +58,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover  half'>
+    <cover class='cover post half'>
       
         
   <h1 class='title'>肥宅小窝</h1>
@@ -279,27 +279,12 @@
 
   <div class="l_body">
     <div class='body-wrapper'>
-      
-<div class='l_main'>
+      <div class='l_main'>
   
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
+
   
+    <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
@@ -308,11 +293,13 @@
     <div class="meta" id="header-meta">
       
         
-  <h2 class="title">
-    <a href="/example/uni生命周期/">
-      uni-app的生命周期
-    </a>
-  </h2>
+  
+    <h1 class="title">
+      <a href="/example/uni生命周期/">
+        uni-app的生命周期
+      </a>
+    </h1>
+  
 
 
       
@@ -359,6 +346,19 @@
         
           
             
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
 
           
         
@@ -375,9 +375,9 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>uni-app的生命周期分为应用生命周期和页面生命周期</p>
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          <p>uni-app的生命周期分为应用生命周期和页面生命周期</p>
 <h2 id="1-应用生命周期"><a href="#1-应用生命周期" class="headerlink" title="1.应用生命周期"></a>1.应用生命周期</h2><ul>
 <li><strong>onLaunch</strong>：当uni-app 初始化完成时触发（全局只触发一次）</li>
 <li><strong>onShow</strong>：当 uni-app 启动，或从后台进入前台显示</li>
@@ -387,134 +387,381 @@
 <p><em>注意：</em></p>
 <ul>
 <li>应用生命周期仅可在App.vue中监听，在其它页面监听无效。</li>
-<li>onlaunch里进行页面跳转，如遇白屏报错，请参考<a href="https://ask.dcloud.net.cn/article/35942" target="_blank" rel="noopener">https://ask.dcloud.net.cn/article/35942</a>
-      
-        <div class="readmore">
-          <a href="/example/uni生命周期/" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
+<li>onlaunch里进行页面跳转，如遇白屏报错，请参考<a href="https://ask.dcloud.net.cn/article/35942" target="_blank" rel="noopener">https://ask.dcloud.net.cn/article/35942</a><a id="more"></a>
+</li>
+</ul>
+<hr>
+<h2 id="2-页面生命周期"><a href="#2-页面生命周期" class="headerlink" title="2.页面生命周期"></a>2.页面生命周期</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">函数名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th style="text-align:left">说明</th>
+<th style="text-align:left">平台差异说明</th>
+<th style="text-align:left">最低版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>onLoad</strong></td>
+<td style="text-align:left">监听页面加载，其参数为上个页面传递的数据，  参数类型为Object（用于页面传参），参考<a href="https://uniapp.dcloud.io/api/router?id=navigateto" target="_blank" rel="noopener">示例</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>onShow</strong></td>
+<td style="text-align:left">监听页面显示。页面每次出现在屏幕上都触发，包括从下级页面点返回露出当前页面</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>onReady</strong></td>
+<td style="text-align:left">监听页面初次渲染完成。注意如果渲染速度快，会在页面进入动画完成前触发</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>onHide</strong></td>
+<td style="text-align:left">监听页面隐藏</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>onUnload</strong></td>
+<td style="text-align:left">监听窗口尺寸变化</td>
+<td style="text-align:left">5+App、微信小程序</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>onPullDownRefresh</strong></td>
+<td style="text-align:left">监听用户下拉动作，一般用于下拉刷新，参考<a href="https://uniapp.dcloud.io/api/ui/pulldown" target="_blank" rel="noopener">示例</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>onReachBottom</strong></td>
+<td style="text-align:left">页面上拉触底事件的处理函数</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>onTabItemTap</strong></td>
+<td style="text-align:left">点击 tab 时触发，参数为Object，具体见下方注意事项</td>
+<td style="text-align:left">微信小程序、百度小程序、H5、5+App（自定义组件模式）</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>onShareAppMessage</strong></td>
+<td style="text-align:left">用户点击右上角分享</td>
+<td style="text-align:left">微信小程序、百度小程序、头条小程序、支付宝小程序</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>onPageScroll</strong></td>
+<td style="text-align:left">监听页面滚动，参数为Object</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>onNavigationBarButtonTap</strong></td>
+<td style="text-align:left">监听原生标题栏按钮点击事件，参数为Object</td>
+<td style="text-align:left">5+ App、H5</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>onBackPress</strong></td>
+<td style="text-align:left">监听页面返回，返回 event = {from:backbutton、 navigateBack} ，backbutton 表示来源是左上角返回按钮或 android 返回键；navigateBack表示来源是 uni.navigateBack ；详细说明及使用：<a href="http://ask.dcloud.net.cn/article/35120" target="_blank" rel="noopener">onBackPress 详解</a></td>
+<td style="text-align:left">5+App、H5</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>onNavigationBarSearchInputChanged</strong></td>
+<td style="text-align:left">监听原生标题栏搜索输入框输入内容变化事件</td>
+<td style="text-align:left">5+App、H5</td>
+<td style="text-align:left">1.6.0</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>onNavigationBarSearchInputConfirmed</strong></td>
+<td style="text-align:left">监听原生标题栏搜索输入框搜索事件，用户点击软键盘上的“搜索”按钮时触发。</td>
+<td style="text-align:left">5+App、H5</td>
+<td style="text-align:left">1.6.0</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>onNavigationBarSearchInputClicked</strong></td>
+<td style="text-align:left">监听原生标题栏搜索输入框点击事件</td>
+<td style="text-align:left">5+App、H5</td>
+<td style="text-align:left">1.6.0</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote>
+<p><strong>onPageScroll</strong> 参数说明：  </p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">scrollTop</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">页面在垂直方向已滚动的距离（单位px）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>onTabItemTap</strong> 参数说明：</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">index</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">被点击tabItem的序号，从0开始</td>
+</tr>
+<tr>
+<td style="text-align:left">pagePath</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">被点击tabItem的页面路径</td>
+</tr>
+<tr>
+<td style="text-align:left">text</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">被点击tabItem的页面路径</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>onNavigationBarButtonTap</strong> 参数说明：</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">index</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">原生标题栏按钮数组的下标</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>onBackPress</strong> 回调参数对象说明：</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th style="text-align:left">类型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">from</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">触发返回行为的来源：’backbutton’——左上角导航栏按钮及安卓返回键；’navigateBack’——uni.navigateBack() 方法。</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    data() &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    onBackPress(options) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'from:'</span> + options.from)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         </div>
-      
-    </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/example/uni-app/">
-      uni-app：pages.json配置
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
         
           
-        
-          
-            
-  <div class='new-meta-item author'>
-    <a href="https://fantasyarcher.github.io" rel="nofollow">
-      
-        <i class="fas fa-user" aria-hidden="true"></i>
-      
-      <p>Mr.L</p>
-    </a>
-  </div>
 
 
-          
+  <section class='meta' id="footer-meta">
+    <hr>
+    <div class='new-meta-box'>
+      
         
-          
-            <div class="new-meta-item date">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-08-20T16:44:49+08:00">
   <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2019-08-14</p>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>最后更新于 2019年8月20日</p>
   </a>
 </div>
 
-          
+        
+      
         
           
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blog/categories/uni-app/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>uni-app</p>
-    </a>
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://fantasyarcher.github.io/example/uni生命周期/&title=uni-app的生命周期 | 肥宅小窝&summary=uni-app的生命周期分为应用生命周期和页面生命周期
+1.应用生命周期
+onLaunch：当uni-app 初始化完成时触发（全局只触发一次）
+onShow：当 uni-app 启动，或从后台进入前台显示
+onHide：当 uni-app 从前台进入后台
+onUniNViewMessage：对 nvue 页面发送的数据进行监听，可参考nvue 向 vue 通讯
+
+注意：
+
+应用生命周期仅可在App.vue中监听，在其它页面监听无效。
+onlaunch里进行页面跳转，如遇白屏报错，请参考https://ask.dcloud.net.cn/article/35942"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://fantasyarcher.github.io/example/uni生命周期/&title=uni-app的生命周期 | 肥宅小窝&summary=uni-app的生命周期分为应用生命周期和页面生命周期
+1.应用生命周期
+onLaunch：当uni-app 初始化完成时触发（全局只触发一次）
+onShow：当 uni-app 启动，或从后台进入前台显示
+onHide：当 uni-app 从前台进入后台
+onUniNViewMessage：对 nvue 页面发送的数据进行监听，可参考nvue 向 vue 通讯
+
+注意：
+
+应用生命周期仅可在App.vue中监听，在其它页面监听无效。
+onlaunch里进行页面跳转，如遇白屏报错，请参考https://ask.dcloud.net.cn/article/35942"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://fantasyarcher.github.io/example/uni生命周期/&title=uni-app的生命周期 | 肥宅小窝&summary=uni-app的生命周期分为应用生命周期和页面生命周期
+1.应用生命周期
+onLaunch：当uni-app 初始化完成时触发（全局只触发一次）
+onShow：当 uni-app 启动，或从后台进入前台显示
+onHide：当 uni-app 从前台进入后台
+onUniNViewMessage：对 nvue 页面发送的数据进行监听，可参考nvue 向 vue 通讯
+
+注意：
+
+应用生命周期仅可在App.vue中监听，在其它页面监听无效。
+onlaunch里进行页面跳转，如遇白屏报错，请参考https://ask.dcloud.net.cn/article/35942"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
   </div>
+</div>
 
 
-          
+
         
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
       
     </div>
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h2 id="1-pages配置"><a href="#1-pages配置" class="headerlink" title="1.pages配置"></a>1.pages配置</h2><p>主要用来进行页面的配置，建立的新页面必须添加到pages配置中，pages可谓页面添加基础设置：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"pages"</span>: [</span><br><span class="line">	<span class="comment">//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="string">"path"</span>: <span class="string">"pages/tabbar/home/home"</span>,<span class="comment">//页面所在的路径</span></span><br><span class="line">		<span class="comment">// style为页面的样式相关，例如navigationBarTitleText为默认的标题栏标题</span></span><br><span class="line">		<span class="string">"style"</span>: &#123;</span><br><span class="line">			<span class="string">"navigationBarTitleText"</span>: <span class="string">"首页"</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="string">"path"</span>: <span class="string">"pages/tabbar/gank/gank"</span>,</span><br><span class="line">		<span class="string">"style"</span>: &#123;</span><br><span class="line">			<span class="string">"navigationBarTitleText"</span>: <span class="string">"干货"</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">   ]</span><br></pre></td></tr></table></figure></p>
-      
-        <div class="readmore">
-          <a href="/example/uni-app/" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-    
-  </section>
-</article>
-
-          </div>
         
+        
+            <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="/example/Dva实现redux/" rel="prev" title="通过DvaJs实现redux">
+                                  
+                                      通过DvaJs实现redux
+                                  
+                                </a>
+                            </h4>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/example/uni-app/" rel="prev" title="uni-app：pages.json配置">
+                                    
+                                        uni-app：pages.json配置
+                                    
+                                </a>
+                            </h4>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
       
-    
-  </section>
-  
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
+      
+      
+        <section id="comments">
+          <div id="gitalk-container"></div>
+        </section>
+      
+      
+    </section>
+  </article>
+
 
   
 
 
-    
-  
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'uni-app的生命周期',
+      tools: true
+    }
+  </script>
+
 
 </div>
 <aside class='l_side'>
@@ -580,6 +827,20 @@
           
           
             
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-应用生命周期"><span class="toc-text">1.应用生命周期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-页面生命周期"><span class="toc-text">2.页面生命周期</span></a></li></ol>
+    </div>
+  </section>
+
 
           
         
@@ -889,6 +1150,23 @@
 
 
 
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: "b7a76e6da48eb317b959",
+      clientSecret: "e291fa9943dff6b712bc0214be9ef0af0b7117b3",
+      repo: "FantasyArcher.github.io",
+      owner: "FantasyArcher",
+      admin: "FantasyArcher",
+      
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+      
+      distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+    gitalk.render('gitalk-container');
+  </script>
 
 
 
