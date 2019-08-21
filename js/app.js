@@ -290,13 +290,4 @@ var customSearch;
 
 	});
 
-	var gitalk = new Gitalk({
-		clientID: 'b7a76e6da48eb317b959',
-		clientSecret: 'e291fa9943dff6b712bc0214be9ef0af0b7117b3',
-		repo: 'FantasyArcher.github.io',
-		owner: 'FantasyArcher',
-		admin: ['FantasyArcher'],
-		id: md5(location.href)
-	})
-
 })(jQuery);
