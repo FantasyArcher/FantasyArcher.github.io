@@ -639,7 +639,135 @@
 <li>跳转到 tabBar 页面只能使用 switchTab 跳转</li>
 </ul>
 <hr>
-<h3 id="3-uni-reLaunch-OBJECT"><a href="#3-uni-reLaunch-OBJECT" class="headerlink" title="3.uni.reLaunch(OBJECT)"></a><strong>3.uni.reLaunch(OBJECT)</strong></h3>
+<h3 id="3-uni-reLaunch-OBJECT"><a href="#3-uni-reLaunch-OBJECT" class="headerlink" title="3.uni.reLaunch(OBJECT)"></a><strong>3.uni.reLaunch(OBJECT)</strong></h3><p>关闭所有页面，打开到应用内的某个页面。</p>
+<p>OBJECT参数说明</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th style="text-align:left">类型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th style="text-align:left">必填</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>url</strong></td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">需要跳转的应用内页面路径 , 路径后可以带参数。参数与路径之间使用?分隔，参数键与参数值用=相连，不同参数用&amp;分隔；如 ‘path?key=value&amp;key2=value2’，如果跳转的页面路径是 tabBar 页面则不能带参数</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>success</strong></td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">接口调用成功的回调函数</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>fail</strong></td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">接口调用失败的回调函数</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>complete</strong></td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">接口调用结束的回调函数（调用成功、失败都会执行）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>示例</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">uni.reLaunch(&#123;</span><br><span class="line">    url: <span class="string">'test?id=1'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    onLoad: <span class="function"><span class="keyword">function</span> (<span class="params">option</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(option.id);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="4-uni-switchTab-OBJECT"><a href="#4-uni-switchTab-OBJECT" class="headerlink" title="4.uni.switchTab(OBJECT)"></a><strong>4.uni.switchTab(OBJECT)</strong></h3><p>跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面。</p>
+<p>OBJECT参数说明</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th style="text-align:left">类型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th style="text-align:left">必填</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>url</strong></td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">需要跳转的 tabBar 页面的路径（需在 pages.json 的 tabBar 字段定义的页面），路径后不能带参数</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>success</strong></td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">接口调用成功的回调函数</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>fail</strong></td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">接口调用失败的回调函数</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>complete</strong></td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">接口调用结束的回调函数（调用成功、失败都会执行）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>示例</p>
+</blockquote>
+<p>pages.json<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"tabBar"</span>: &#123;</span><br><span class="line">    <span class="string">"list"</span>: [&#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/index/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"首页"</span></span><br><span class="line">    &#125;,&#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/other/other"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"其他"</span></span><br><span class="line">    &#125;]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>other.vue<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">uni.switchTab(&#123;</span><br><span class="line">    url: <span class="string">'/pages/index/index'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="5-uni-navigateBack-OBJECT"><a href="#5-uni-navigateBack-OBJECT" class="headerlink" title="5.uni.navigateBack(OBJECT)"></a><strong>5.uni.navigateBack(OBJECT)</strong></h3><p>关闭当前页面，返回上一页面或多级页面。可通过 <code>getCurrentPages()</code> 获取当前的页面栈，决定需要返回几层。</p>
+<p>OBJECT参数说明</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th style="text-align:left">类型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th style="text-align:left">必填</th>
+<th style="text-align:left">默认值&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th style="text-align:left">说明</th>
+<th style="text-align:left">平台差异说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>delta</strong></td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">返回的页面数，如果 delta 大于现有页面数，则返回到首页。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>animationType</strong></td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">pop-out</td>
+<td style="text-align:left">窗口关闭的动画效果，详见：<a href="https://uniapp.dcloud.io/api/router?id=animation" target="_blank" rel="noopener">窗口动画</a></td>
+<td style="text-align:left">5+App</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>animationDuration</strong></td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">窗口动画持续时间，单位为 ms</td>
+<td style="text-align:left">5+App</td>
+</tr>
+</tbody>
+</table>
+
         </div>
         
           
@@ -650,10 +778,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-08-22T18:09:52+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-08-26T15:21:42+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2019年8月22日</p>
+    <p>最后更新于 2019年8月26日</p>
   </a>
 </div>
 
@@ -858,7 +986,7 @@ uni-app路由全部交给框架统一管理，开发者需要在pages.json里配
 </header>
 
     <div class='content pure'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#路由跳转"><span class="toc-text">路由跳转</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-使用navigator组件跳转"><span class="toc-text">1.使用navigator组件跳转</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-调用API跳转"><span class="toc-text">2.调用API跳转</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-uni-navigateTo-OBJECT"><span class="toc-text">1.uni.navigateTo(OBJECT)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-uni-redirectTo-OBJECT"><span class="toc-text">2.uni.redirectTo(OBJECT)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-uni-reLaunch-OBJECT"><span class="toc-text">3.uni.reLaunch(OBJECT)</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#路由跳转"><span class="toc-text">路由跳转</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-使用navigator组件跳转"><span class="toc-text">1.使用navigator组件跳转</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-调用API跳转"><span class="toc-text">2.调用API跳转</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-uni-navigateTo-OBJECT"><span class="toc-text">1.uni.navigateTo(OBJECT)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-uni-redirectTo-OBJECT"><span class="toc-text">2.uni.redirectTo(OBJECT)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-uni-reLaunch-OBJECT"><span class="toc-text">3.uni.reLaunch(OBJECT)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-uni-switchTab-OBJECT"><span class="toc-text">4.uni.switchTab(OBJECT)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-uni-navigateBack-OBJECT"><span class="toc-text">5.uni.navigateBack(OBJECT)</span></a></li></ol></li></ol>
     </div>
   </section>
 
