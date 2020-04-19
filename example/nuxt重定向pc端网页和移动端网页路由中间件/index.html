@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>通过DvaJs实现redux | 肥宅小窝</title>
+  <title>Nuxt重定向pc端网页和移动端网页路由中间件 | 肥宅小窝</title>
   
   
 
@@ -295,8 +295,8 @@
         
   
     <h1 class="title">
-      <a href="/example/Dva实现redux/">
-        通过DvaJs实现redux
+      <a href="/example/nuxt重定向pc端网页和移动端网页路由中间件/">
+        Nuxt重定向pc端网页和移动端网页路由中间件
       </a>
     </h1>
   
@@ -325,7 +325,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2018-12-21</p>
+    <p>2020-02-25</p>
   </a>
 </div>
 
@@ -335,9 +335,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/blog/categories/ant-design-pro/DvaJs/' rel="nofollow">
+    <a href='/blog/categories/Nuxt/中间件/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>ant-design-pro&nbsp;/&nbsp;DvaJs</p>
+      <p>Nuxt&nbsp;/&nbsp;中间件</p>
     </a>
   </div>
 
@@ -377,32 +377,19 @@
 
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
-          <h2 id="1-在models中创建文件"><a href="#1-在models中创建文件" class="headerlink" title="1.在models中创建文件"></a>1.在models中创建文件</h2><p><img src="http://wx2.sinaimg.cn/large/0067JWoSly1g1yoe9xx29j309n05g3yd.jpg" alt="image"><br><a id="more"></a></p>
-<h2 id="2-配置文件"><a href="#2-配置文件" class="headerlink" title="2.配置文件"></a>2.配置文件</h2><p>基本配置和请求接口时相同<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  namespace: <span class="string">'testList'</span>,</span><br><span class="line">  state: &#123;</span><br><span class="line">    <span class="comment">// state中定义变量</span></span><br><span class="line">    testValue: <span class="number">1</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  effects: &#123;</span><br><span class="line">    <span class="comment">// 在effects中书写改变变量的方法</span></span><br><span class="line">    * changeTestValue(&#123; payload &#125;, &#123; call, put &#125;) &#123;</span><br><span class="line">      <span class="keyword">yield</span> put(&#123;</span><br><span class="line">        <span class="comment">// type中填入reducers相对应的action方法</span></span><br><span class="line">        type: <span class="string">'getTestValue'</span>,</span><br><span class="line">        <span class="comment">// 传入新的数据</span></span><br><span class="line">        payload:payload</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  </span><br><span class="line">  reducers: &#123;</span><br><span class="line">    <span class="comment">// 重新给state中对应变量赋值</span></span><br><span class="line">    getTestValue(state, action) &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        ...state,</span><br><span class="line">        testValue: action.payload,</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<h2 id="3-读取models中的变量"><a href="#3-读取models中的变量" class="headerlink" title="3.读取models中的变量"></a>3.读取models中的变量</h2><ul>
-<li>在页面中引入connect方法</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; connect &#125; <span class="keyword">from</span> <span class="string">'dva'</span>;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>绑定state到view</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@connect(<span class="function">(<span class="params">&#123; testList &#125;</span>) =&gt;</span> (&#123;</span><br><span class="line">  testList,</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
-<ul>
-<li>读取models中的值</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">render() &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123;</span><br><span class="line">    testList: &#123; testValue &#125;,</span><br><span class="line">  &#125; = <span class="keyword">this</span>.props;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'现在的值：'</span> + testValue);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="4-更改models中的变量"><a href="#4-更改models中的变量" class="headerlink" title="4.更改models中的变量"></a>4.更改models中的变量</h2><ul>
-<li>在页面中引入connect方法</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; connect &#125; <span class="keyword">from</span> <span class="string">'dva'</span>;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>绑定state到view</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@connect(<span class="function">(<span class="params">&#123; testList &#125;</span>) =&gt;</span> (&#123;</span><br><span class="line">  testList,</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
-<ul>
-<li>调用更改方法</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">componentDidMount() &#123;</span><br><span class="line">    dispatch(&#123;</span><br><span class="line">    <span class="comment">// type为models中reducers里对应的方法</span></span><br><span class="line">    type: <span class="string">'testList/changeTestValue'</span>,</span><br><span class="line">    <span class="comment">// payload为新传入的数据</span></span><br><span class="line">    payload: <span class="number">2</span>,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <p>使用Nuxt框架开发网页，如果同时有pc端+移动端的需求，可以通过Nuxt的中间件来判断在不同的设备上跳转不同的路由地址。<br><a id="more"></a></p>
+<blockquote>
+<p>首先在工具类中创建判断设备类型的方法<br>./utils/deviceType.js</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * @param &#123;*&#125; UA ,就是userAgent</span></span><br><span class="line"><span class="comment"> * @returns  type: 设备类型</span></span><br><span class="line"><span class="comment"> * env: 访问环境(微信/微博/qq)</span></span><br><span class="line"><span class="comment"> * masklayer: 就是给外部拿到判断是否显示遮罩层的,一些特殊环境要引导用户到外部去打开访问</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isWechat</span>(<span class="params">UA</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="regexp">/MicroMessenger/i</span>.test(UA) ? <span class="literal">true</span> : <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isWeibo</span>(<span class="params">UA</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="regexp">/Weibo/i</span>.test(UA) ? <span class="literal">true</span> : <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isQQ</span>(<span class="params">UA</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="regexp">/QQ/i</span>.test(UA) ? <span class="literal">true</span> : <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isMoible</span>(<span class="params">UA</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="regexp">/(Android|webOS|iPhone|iPod|tablet|BlackBerry|Mobile)/i</span>.test(UA)</span><br><span class="line">    ? <span class="literal">true</span></span><br><span class="line">    : <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isIOS</span>(<span class="params">UA</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="regexp">/iPhone|iPad|iPod/i</span>.test(UA) ? <span class="literal">true</span> : <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isAndroid</span>(<span class="params">UA</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="regexp">/Android/i</span>.test(UA) ? <span class="literal">true</span> : <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">deviceType</span>(<span class="params">UA</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (isMoible(UA)) &#123;</span><br><span class="line">    <span class="keyword">if</span> (isIOS(UA)) &#123;</span><br><span class="line">      <span class="keyword">if</span> (isWechat(UA)) &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">          type: <span class="string">"ios"</span>,</span><br><span class="line">          env: <span class="string">"wechat"</span>,</span><br><span class="line">          masklayer: <span class="literal">true</span></span><br><span class="line">        &#125;;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (isWeibo(UA)) &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">          type: <span class="string">"ios"</span>,</span><br><span class="line">          env: <span class="string">"weibo"</span>,</span><br><span class="line">          masklayer: <span class="literal">true</span></span><br><span class="line">        &#125;;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (isQQ(UA)) &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">          type: <span class="string">"ios"</span>,</span><br><span class="line">          env: <span class="string">"qq"</span>,</span><br><span class="line">          masklayer: <span class="literal">true</span></span><br><span class="line">        &#125;;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        type: <span class="string">"ios"</span></span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (isAndroid(UA)) &#123;</span><br><span class="line">      <span class="keyword">if</span> (isWechat(UA)) &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">          type: <span class="string">"android"</span>,</span><br><span class="line">          env: <span class="string">"wechat"</span>,</span><br><span class="line">          masklayer: <span class="literal">true</span></span><br><span class="line">        &#125;;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (isWeibo(UA)) &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">          type: <span class="string">"android"</span>,</span><br><span class="line">          env: <span class="string">"weibo"</span>,</span><br><span class="line">          masklayer: <span class="literal">true</span></span><br><span class="line">        &#125;;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (isQQ(UA)) &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">          type: <span class="string">"android"</span>,</span><br><span class="line">          env: <span class="string">"qq"</span>,</span><br><span class="line">          masklayer: <span class="literal">true</span></span><br><span class="line">        &#125;;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        type: <span class="string">"android"</span></span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      type: <span class="string">"mobile"</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      type: <span class="string">"pc"</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在 middleware 文件夹中创建中间件文件 device.js<br><img src="https://s1.ax1x.com/2020/03/26/GSkd1A.png" alt="image"></p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; deviceType &#125; <span class="keyword">from</span> <span class="string">"~/utils/deviceType"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span>(<span class="params">context</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// @ts-ignore</span></span><br><span class="line">  context.userAgent = process.server</span><br><span class="line">    ? context.req.headers[<span class="string">"user-agent"</span>]</span><br><span class="line">    : navigator.userAgent;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 给全局上下文添加一个属性来保存我们返回的匹配信息</span></span><br><span class="line">  context.deviceType = deviceType(context.userAgent);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 这里注入到store,如果部分页面需要判断机型请求不同的数据,</span></span><br><span class="line">  context.store.commit(<span class="string">"..."</span>, context.deviceType.type);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 若是判断UA非移动端的,就在这里做处理了</span></span><br><span class="line">  <span class="comment">// context.redirect(status,url) 这个可以重定向到外部网站</span></span><br><span class="line">  <span class="comment">// 若是内部访问可以直接用router对象push</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (context.deviceType.type === <span class="string">"pc"</span>) &#123;</span><br><span class="line">    <span class="comment">// context.redirect(301,'https://wwww.baidu.com')    //301是永久重定向，如果你想随着设备类型改变一直变，请改为302</span></span><br><span class="line">    <span class="comment">// 若是pc端，判断地址是否有m，有的话刷新重新定向到pc端地址</span></span><br><span class="line">    <span class="keyword">if</span> (</span><br><span class="line">      context.route.fullPath.indexOf(<span class="string">"/m"</span>) &gt; <span class="number">-1</span> ||</span><br><span class="line">      context.route.fullPath.indexOf(<span class="string">"/m/"</span>) &gt; <span class="number">-1</span></span><br><span class="line">    ) &#123;</span><br><span class="line">      <span class="comment">// 获取路由</span></span><br><span class="line">      <span class="keyword">let</span> url = context.route.fullPath.substring(<span class="number">2</span>);</span><br><span class="line">      context.redirect(<span class="number">302</span>,<span class="string">"你的域名"</span> + url);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// 若是移动端，判断地址是否包含m，没有的话重新定向到移动端地址</span></span><br><span class="line">    <span class="keyword">if</span> (</span><br><span class="line">      context.route.fullPath.indexOf(<span class="string">"/m"</span>) &lt; <span class="number">0</span> ||</span><br><span class="line">      context.route.fullPath.indexOf(<span class="string">"/m/"</span>) &lt; <span class="number">0</span></span><br><span class="line">    ) &#123;</span><br><span class="line">      context.redirect(<span class="number">302</span>, <span class="string">"/m"</span> + context.route.fullPath);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>最后在 nuxt.config.js 中引入中间件，这样就能根据设备自动重定向网站地址</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  ... ...</span><br><span class="line">  router:&#123;</span><br><span class="line">    middleware: [<span class="string">'device'</span>]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         </div>
         
@@ -414,7 +401,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-19T23:37:01+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-19T23:40:12+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
     <p>最后更新于 2020年4月19日</p>
@@ -436,7 +423,7 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://fantasyarcher.github.io/example/Dva实现redux/&title=通过DvaJs实现redux | 肥宅小窝&summary=1.在models中创建文件"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://fantasyarcher.github.io/example/nuxt重定向pc端网页和移动端网页路由中间件/&title=Nuxt重定向pc端网页和移动端网页路由中间件 | 肥宅小窝&summary=使用Nuxt框架开发网页，如果同时有pc端+移动端的需求，可以通过Nuxt的中间件来判断在不同的设备上跳转不同的路由地址。"
           
           >
           
@@ -448,7 +435,7 @@
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://fantasyarcher.github.io/example/Dva实现redux/&title=通过DvaJs实现redux | 肥宅小窝&summary=1.在models中创建文件"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://fantasyarcher.github.io/example/nuxt重定向pc端网页和移动端网页路由中间件/&title=Nuxt重定向pc端网页和移动端网页路由中间件 | 肥宅小窝&summary=使用Nuxt框架开发网页，如果同时有pc端+移动端的需求，可以通过Nuxt的中间件来判断在不同的设备上跳转不同的路由地址。"
           
           >
           
@@ -460,7 +447,7 @@
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://fantasyarcher.github.io/example/Dva实现redux/&title=通过DvaJs实现redux | 肥宅小窝&summary=1.在models中创建文件"
+          href="http://service.weibo.com/share/share.php?url=https://fantasyarcher.github.io/example/nuxt重定向pc端网页和移动端网页路由中间件/&title=Nuxt重定向pc端网页和移动端网页路由中间件 | 肥宅小窝&summary=使用Nuxt框架开发网页，如果同时有pc端+移动端的需求，可以通过Nuxt的中间件来判断在不同的设备上跳转不同的路由地址。"
           
           >
           
@@ -484,20 +471,20 @@
         
             <div class="prev-next">
                 
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/example/uni-app/" rel="prev" title="uni-app：pages.json配置">
-                                  
-                                      uni-app：pages.json配置
-                                  
+                                <a href="/example/Android、iOS应用权限判断/" rel="prev" title="Android、iOS应用权限判断">
+                                    
+                                        Android、iOS应用权限判断
+                                    
                                 </a>
                             </h4>
                             
                         </span>
                     </section>
-                
                 
             </div>
         
@@ -536,7 +523,7 @@
 
   <script>
     window.subData = {
-      title: '通过DvaJs实现redux',
+      title: 'Nuxt重定向pc端网页和移动端网页路由中间件',
       tools: true
     }
   </script>
@@ -606,20 +593,6 @@
           
           
             
-  <section class='widget toc-wrapper'>
-    
-<header class='pure'>
-  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
-  
-    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
-  
-</header>
-
-    <div class='content pure'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-在models中创建文件"><span class="toc-text">1.在models中创建文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-配置文件"><span class="toc-text">2.配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-读取models中的变量"><span class="toc-text">3.读取models中的变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-更改models中的变量"><span class="toc-text">4.更改models中的变量</span></a></li></ol>
-    </div>
-  </section>
-
 
           
         
