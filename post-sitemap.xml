@@ -8,8 +8,8 @@
     </url>
 
     <url>
-        <loc>https://fantasyarcher.github.io/example/%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/</loc>
-        <lastmod>2020-04-19T15:57:47.928Z</lastmod>
+        <loc>https://fantasyarcher.github.io/example/Dva%E5%AE%9E%E7%8E%B0redux/</loc>
+        <lastmod>2020-04-19T16:02:49.466Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +17,15 @@
 
     <url>
         <loc>https://fantasyarcher.github.io/example/nuxt%E9%87%8D%E5%AE%9A%E5%90%91pc%E7%AB%AF%E7%BD%91%E9%A1%B5%E5%92%8C%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%BD%91%E9%A1%B5%E8%B7%AF%E7%94%B1%E4%B8%AD%E9%97%B4%E4%BB%B6/</loc>
-        <lastmod>2020-04-19T15:40:12.208Z</lastmod>
+        <lastmod>2020-04-19T16:02:49.460Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://fantasyarcher.github.io/example/%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/</loc>
+        <lastmod>2020-04-19T16:02:49.453Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -42,14 +50,6 @@
     <url>
         <loc>https://fantasyarcher.github.io/example/uni-app/</loc>
         <lastmod>2020-04-19T15:37:01.157Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://fantasyarcher.github.io/example/Dva%E5%AE%9E%E7%8E%B0redux/</loc>
-        <lastmod>2020-04-19T15:37:01.151Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

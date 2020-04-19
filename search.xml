@@ -15,8 +15,6 @@
           
           <category> Nuxt </category>
           
-          <category> 中间件 </category>
-          
       </categories>
       
       
@@ -54,8 +52,6 @@
       <categories>
           
           <category> uni-app </category>
-          
-          <category> 工具类 </category>
           
       </categories>
       
@@ -132,8 +128,6 @@
       <categories>
           
           <category> ant-design-pro </category>
-          
-          <category> DvaJs </category>
           
       </categories>
       
