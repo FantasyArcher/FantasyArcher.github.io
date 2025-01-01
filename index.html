@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>1996 - DengSir</title>
+    <title>Happy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!--<meta itemprop="image" content="./images/fenxiang.png" />-->
@@ -26,11 +26,11 @@
         }
 
         .body--ready {
-            background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+            background: -webkit-linear-gradient(top, rgb(250, 199, 163) 0%, rgb(252, 105, 0) 120%);
+            background: -moz-linear-gradient(top, rgb(250, 199, 163) 0%, rgb(252, 105, 0) 120%);
+            background: -o-linear-gradient(top, rgb(250, 199, 163) 0%, rgb(252, 105, 0) 120%);
+            background: -ms-linear-gradient(top, rgb(250, 199, 163) 0%, rgb(252, 105, 0) 120%);
+            background: linear-gradient(top, rgb(top, rgb(250, 199, 163) 0%, rgb(252, 105, 0) 120%);
         }
 
         .text {
@@ -100,34 +100,13 @@
 
 <canvas class="canvas" width="1820" height="905"></canvas>
 
-<script language="javascript">
-    function show_date_time() {
-        window.setTimeout("show_date_time()", 1000);
-        BirthDay = new Date("2/20/2018 00:00:00");//这个日期是可以修改的
-        today = new Date();
-        timeold = (today.getTime() - BirthDay.getTime());
-        sectimeold = timeold / 1000
-        secondsold = Math.floor(sectimeold);
-        msPerDay = 24 * 60 * 60 * 1000
-        e_daysold = timeold / msPerDay
-        daysold = Math.floor(e_daysold);
-        e_hrsold = (e_daysold - daysold) * 24;
-        hrsold = Math.floor(e_hrsold);
-        e_minsold = (e_hrsold - hrsold) * 60;
-        minsold = Math.floor((e_hrsold - hrsold) * 60);
-        seconds = Math.floor((e_minsold - minsold) * 60);
-        span_dt_dt.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
-    }
-
-    // show_date_time();
-</script>
 <script>
     var S = {
         init: function () {
             S.Drawing.init('.canvas');
             document.body.classList.add('body--ready');
 			//想说的话
-            S.UI.simulate("|#countdown 5|蒋|雯|雯|现在是|#time|祝你|Happy|New|Year|新年快乐!");
+            S.UI.simulate("|#countdown 5|蒋|蒋雯|蒋雯雯|现在是|#time|祝你|新年快乐!|愿你|愿你,2025年|好运连连|钱包鼓鼓|健健康康|百事从欢|万事顺遂|过往皆为序章|将来皆为期盼|一路阳光|少加班☻|愿你的生活|如你一样|明亮灿烂|温暖和悦|可爱无边|Happy New Year!");
             S.Drawing.loop(function () {
                 S.Shape.render();
             });
@@ -253,7 +232,7 @@
                             } else {
                                 S.Shape.switchShape(S.ShapeBuilder.letter(index), true);
                             }
-                        }, 2000, value, true);
+                        }, 1500, value, true);
                         break;
 
                     case 'rectangle':
